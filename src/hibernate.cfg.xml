@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/Lol</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+        <property name="connection.username">root</property>
+        <property name="connection.password">gbjyth</property>
+
+        <property name="hibernate.c3p0.timeout">9000000</property>
+        <!--
+                <property name="connection.username">root</property>
+        <property name="connection.password">gbjyth</property>
+        -->
+
+        <mapping class="com.King.dao.GameBD"/>
+        <mapping resource="com/King/dao/GameBD.hbm.xml"/>
+        <mapping resource="com/King/dao/GameChampionBanBD.hbm.xml"/>
+        <mapping class="com.King.dao.GameChampionBanBD"/>
+        <mapping resource="com/King/dao/GameConfigBD.hbm.xml"/>
+        <mapping class="com.King.dao.GameConfigBD"/>
+        <mapping resource="com/King/dao/GamePlayersBD.hbm.xml"/>
+        <mapping class="com.King.dao.GamePlayersBD"/>
+        <mapping resource="com/King/dao/PlayerBD.hbm.xml"/>
+        <mapping class="com.King.dao.PlayerBD"/>
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

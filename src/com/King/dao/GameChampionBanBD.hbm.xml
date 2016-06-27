@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.King.dao.GameChampionBanBD" table="game_champion_ban" schema="" catalog="Lol">
+        <id name="id" column="id">
+            <generator class="increment"/>
+        </id>
+        <property name="charId" column="charId"/>
+        <property name="teamId" column="teamId"/>
+        <property name="pickTurn" column="pickTurn"/>
+        <many-to-one name="gameByGameId" class="com.King.dao.GameBD">
+            <column name="gameId" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
