@@ -8,14 +8,9 @@
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 
         <property name="connection.username">root</property>
-        <property name="connection.password">gbjyth</property>
+        <property name="connection.password">root</property>
 
         <property name="hibernate.c3p0.timeout">9000000</property>
-        <!--
-                <property name="connection.username">root</property>
-        <property name="connection.password">gbjyth</property>
-        -->
-
         <mapping class="com.King.dao.GameBD"/>
         <mapping resource="com/King/dao/GameBD.hbm.xml"/>
         <mapping resource="com/King/dao/GameChampionBanBD.hbm.xml"/>
